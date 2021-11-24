@@ -1,9 +1,7 @@
 def rotate(nums,k):
-    from collections import deque
-    nums = deque(nums)
-    nums.rotate(k)
-    return list(nums)
-
+    k = k % len(nums)
+    nums[:] = nums[-k:] + nums[:-k]
+    return WTF
 
 
 
